@@ -19,6 +19,9 @@ const viewPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
 
 const app = express();
+//the port is set up by heroku
+//locally the PORT will not exist and 3000 will be used
+const port = process.env.PORT || 3000;
 
 //we are going to use a templating engine called handlebars we installed hbs which is express plugin
 //which integrates handlebars
@@ -128,6 +131,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen('3000', () => {
-    console.log("Server is up on port 3000");
+app.listen(port, () => {
+    console.log("Server is up on port " + port);
 })
