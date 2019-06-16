@@ -43,14 +43,14 @@ app.get('', (req,res) => {
     //we can set dynamic variables
     res.render('index', {
         title: 'Weather App',
-        name: 'SpiderMan'
+        name: 'Mahesh Mahalingappa'
     });
 });
 
 app.get('/about', (req,res) => {
     res.render('about', {
         title: 'About page',
-        name: 'SpiderMan'
+        name: 'Mahesh Mahalingappa'
     });
 })
 
@@ -58,7 +58,7 @@ app.get('/help', (req,res) => {
     res.render('help', {
         title: 'Help page',
         message: 'How to navaigate to home page',
-        name: 'Spiderman'
+        name: 'Mahesh Mahalingappa'
     })
 })
 
@@ -119,7 +119,7 @@ app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
         errorMessage: 'Help article not found',
-        name: 'Spiderman'
+        name: 'Mahesh Mahalingappa'
     })
 })
 
@@ -127,7 +127,7 @@ app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
         errorMessage: 'Page not found',
-        name: 'Spiderman'
+        name: 'Mahesh Mahalingappa'
     })
 })
 
